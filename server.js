@@ -1,5 +1,5 @@
 
-console.log('changes after version 1')
+console.log('changes after version 1 updated')
 const express = require('express');
 const properties = require('./routes/properties')
  const connectDB = require('./db/connect')
