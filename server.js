@@ -5,6 +5,7 @@ console.log('changes after verison 3 ')
 console.log('changes after version 4')
 const express = require('express');
 const properties = require('./routes/properties')
+const cors = require('cors')
  const connectDB = require('./db/connect')
  require('dotenv').config()
 const app = express();
@@ -12,9 +13,12 @@ const app = express();
 
 
 //middleware
+// app.use(express.static('frontend/dist'))
 app.use(express.json())
 
+// server static files don't know what it means yet 
 
+app.use(cors());
 
 app.use('/api/v1/properties', properties)
 

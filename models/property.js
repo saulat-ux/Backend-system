@@ -8,7 +8,7 @@ const PropertySchema = new mongoose.Schema({
         maxlength:[20, 'name can not be more than 20 chars']
     },exists:{
         type:Boolean,
-        default:false
+        default:true
     },price:String
 })
 

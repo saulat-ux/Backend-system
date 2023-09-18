@@ -1,0 +1,17 @@
+.form-style {
+    max-width: 360px;
+    margin: 60px auto ;
+    padding: 30px;
+}
+.form-style label{
+    margin: 30px auto;
+    display: block;
+}
+.form-style span{
+  margin-bottom: 6px;
+  display: block;
+}
+.form-style input {
+    width: 100%;
+    padding: 6px;
+}
