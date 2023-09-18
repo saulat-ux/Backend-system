@@ -1,7 +1,16 @@
 const mongoose = require('mongoose')
 
 const PropertySchema = new mongoose.Schema({
-    name:String,exists:Boolean,price:String
+    name:{
+        type:String,
+        required: [true,'must provide name'],
+        trim:true,
+        maxlength:[20, 'name can not be more than 20 chars']
+    },exists:{
+        type:Boolean,
+        default:false
+    },price:String
 })
+
 
 module.exports = mongoose.model('Property', PropertySchema)

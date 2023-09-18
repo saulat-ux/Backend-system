@@ -16,11 +16,6 @@ app.use(express.json())
 
 
 
-
-app.get('/testing', (req, res) => {
-    res.send('welcome from server')
-})
-
 app.use('/api/v1/properties', properties)
 
 const port =3000
