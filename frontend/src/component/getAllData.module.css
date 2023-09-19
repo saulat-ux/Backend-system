@@ -1,0 +1,26 @@
+.the-data{
+    max-width: 600px;
+    text-align: center;
+    background: #1bcc2a;
+    padding: 20px 10px;
+    box-sizing: border-box;
+    height: 50%;
+    margin: 60px auto;
+}
+.the-style{
+    border: 1px solid red;
+    background: white;
+    margin: 10px auto;
+}
+.the-style button{
+    padding: 8px;
+    border-radius: 5px ;
+    
+    padding: 10px 20px;
+}
+.btn{
+    gap: 1em;
+    display: flex;
+    
+    justify-content: center;
+}

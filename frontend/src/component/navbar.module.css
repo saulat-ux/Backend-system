@@ -1,0 +1,23 @@
+.navbar{
+    width: 100%;
+    background: #effaf0;
+    padding: 20px 10px;
+    box-sizing: border-box;
+}
+.navbar ul {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 960px;
+    list-style: none;
+}
+.navbar li {
+    margin-left: auto;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 1.2em;
+}
+.navbar a {
+    text-decoration: none;
+    color: #333;
+}
