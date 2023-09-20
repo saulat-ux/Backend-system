@@ -7,6 +7,7 @@ const express = require('express');
 const properties = require('./routes/properties')
 const cors = require('cors')
  const connectDB = require('./db/connect')
+ const notFound = require('./middleware/notFound')
  require('dotenv').config()
 const app = express();
 
@@ -21,6 +22,7 @@ app.use(express.json())
 app.use(cors());
 
 app.use('/api/v1/properties', properties)
+app.use(notFound)
 
 const port =3000
 
