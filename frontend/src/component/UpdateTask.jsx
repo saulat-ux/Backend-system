@@ -1,19 +1,17 @@
 import React, { useState } from 'react'
 import axios from 'axios';
-import { useSearchParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 const UpdateTask = () => {
-  const [seacrhParams] = useSearchParams()
+  const {id} = useParams()
   const [data , setData] = useState([])
-  const dataID = seacrhParams.get('dataID')
-  console.log('the id from url is '+ dataID)
     const [name ,setName] = useState('')
     const [price ,setPrice] = useState('')
 
     const handleSubmit = async (e) => {
         e.preventDefault()         
         try {
-              await axios.patch(`http://localhost:3000/api/v1/properties/${dataID}` , {
+              await axios.patch(`http://localhost:3000/api/v1/properties/${id}` , {
                   name:name,
                   price:price,
                 })

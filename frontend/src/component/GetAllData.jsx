@@ -1,10 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import styles from './getAllData.module.css'
 import { Link } from 'react-router-dom'
-
 import axios from 'axios';
-
-
 
 const GetAllData = () => {
     const [hidden, setHidden] = useState(false)
@@ -36,6 +33,7 @@ const GetAllData = () => {
         })
         
         HandleDelete()
+       
     },[])
 
     const HandleDelete = async (event) => {
@@ -57,36 +55,22 @@ const GetAllData = () => {
       
        
     }
-    // const HandleUpdate = async (event) => {
-    //     try {
-    //         const attrID = event && event.target ? event.target.getAttribute('data-id') : null
-    //             await axios.patch(`http://localhost:3000/api/v1/properties/${attrID}`)
-            
-    //     } catch (error) {
-    //         console.log('could not update '+ error)
-    //     }
-    // }
-    
-
-
-
-
-
-
-   
   return (
       
       <div className={styles['the-data']}>
         {  data && data.map((element, index) => (
             <div key={index} ref={myRef} className={styles['the-style']}>
            
-            <h2> {element.name}</h2>
-            <p>{element.price}</p>
+            <h2> name: {element.name}</h2>
+            <p>price: {element.price}</p>
             <div className={styles['btn']}>
-            <button className='update-btn' data-id={element._id}   ><Link to={`/updatedata?dataID=${element._id}`}> 
+            <button className='update-btn' data-id={element._id}   ><Link to={`/updatedata/${element._id}`}> 
                 update me</Link></button>
             
             <button className='delete-btn'  data-id={element._id} onClick={HandleDelete} >delete me</button>
+            <button className='details-btn'  data-id={element._id}><Link to={`/getData/${element._id}`}> 
+                Details</Link></button>
+
 
             </div>
             </div>
